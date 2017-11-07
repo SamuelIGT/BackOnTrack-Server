@@ -50,6 +50,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>pmd</groupId>
+			<artifactId>pmd</artifactId>
+			<version>4.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.puppycrawl.tools</groupId>
+			<artifactId>checkstyle</artifactId>
+			<version>8.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>findbugs-maven-plugin</artifactId>
+			<version>3.0.5</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -84,10 +99,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<version>3.8</version>
+				<version>4.2.4</version>
 				<configuration>
-					<rulesets>
 						<!-- Two rule sets that come bundled with PMD -->
+					<rulesets>
 						<!-- <ruleset>/rulesets/java/braces.xml</ruleset> -->
 						<!--<ruleset>/rulesets/java/naming.xml</ruleset> -->
 						<!-- Custom local file system rule set -->
