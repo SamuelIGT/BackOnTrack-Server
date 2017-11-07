@@ -103,12 +103,12 @@
 				<!-- <configuration>
 						Two rule sets that come bundled with PMD
 					<rulesets>
-						<!-- <ruleset>/rulesets/java/braces.xml</ruleset> -->
-						<!--<ruleset>/rulesets/java/naming.xml</ruleset> -->
-						<!-- Custom local file system rule set -->
-						<!--<ruleset>${project.basedir}/src/main/resources/pmd-rules.xml</ruleset> -->
-						<!-- Custom remote rule set accessed via a URL -->
-						<!--<ruleset>http://localhost/design.xml</ruleset>-->
+						 <ruleset>/rulesets/java/braces.xml</ruleset>
+						<ruleset>/rulesets/java/naming.xml</ruleset>
+						 Custom local file system rule set
+						<ruleset>${project.basedir}/src/main/resources/pmd-rules.xml</ruleset>
+						 Custom remote rule set accessed via a URL
+						<ruleset>http://localhost/design.xml</ruleset>
 					</rulesets>
 				</configuration> -->
 			</plugin>
