@@ -102,8 +102,8 @@
 				<version>4.2.4</version>
 				<configuration>
 					<rulesets>
-						<ruleset>config/pmd-main.xml</ruleset>
-						<ruleset>config/pmd-test.xml</ruleset>
+						<ruleset>config/pmd-rules.xml</ruleset>
+						<ruleset>pmd-rules.xml</ruleset>
 					</rulesets>
 				</configuration>
 				<!-- <configuration>
