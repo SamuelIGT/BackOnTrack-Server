@@ -150,7 +150,7 @@
 				<configuration>
 					<xmlOutput>true</xmlOutput>
 					<!-- <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile> -->
-					<excludeFilterFile>config/findbugs-include.xml</includeFilterFile>
+					<excludeFilterFile>config/findbugs-include.xml</excludeFilterFile>
 				</configuration>
 			</plugin>
 		</plugins>
