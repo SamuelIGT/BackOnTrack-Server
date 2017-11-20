@@ -2,11 +2,51 @@
 <FindBugsFilter>
     
     <Match>
-    	<Bug pattern = "ES_COMPARING_STRINGS_WITH_EQ"/>
+    	<Bug pattern = "ES_COMPARING_PARAMETER_STRING_WITH_EQ"/>
     </Match>
     
     <Match>
-    	<Bug pattern = "VA_FORMAT_STRING_BAD_ARGUMENT"/>
+    	<Bug pattern = "ES_COMPARING_STRINGS_WITH_EQ"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "NM_METHOD_NAMING_CONVENTION"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "NM_WRONG_PACKAGE_INTENTIONAL"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "SE_NO_SUITABLE_CONSTRUCTOR"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "DMI_DOH"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "EC_NULL_ARG"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "EC_INCOMPATIBLE_ARRAY_COMPARE"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "EQ_ALWAYS_FALSE"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "EQ_ALWAYS_TRUE"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "RCN_REDUNDANT_COMPARISON_OF_NULL_AND_NONNULL_VALUE"/>
+    </Match>
+
+    <Match>
+    	<Bug pattern = "RCN_REDUNDANT_COMPARISON_TWO_NULL_VALUES"/>
     </Match>
     
 </FindBugsFilter>

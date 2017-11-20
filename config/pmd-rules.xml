@@ -1,17 +1,27 @@
 <?xml version="1.0"?>
-<ruleset name="commons-math-customized"
-    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
-  <description>
-    This ruleset checks the code for discouraged programming constructs.
-  </description>
+<ruleset name="commons-math-customized" 
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+  <description>    This ruleset checks the code for discouraged programming constructs.  </description>
   
-   <rule ref="rulesets/java/comments.xml">
-    <exclude name="CommentSize"/>
-  </rule>
- <rule ref="rulesets/java/imports.xml">
-    <exclude name="UnusedImports"/>
+  <rule ref="rulesets/java/basic.xml"/>
+
+  <rule ref="rulesets/java/braces.xml"/>
+    <exclude name="IfElseStmtsMustUseBraces"/>
   </rule>
 
+  <rule ref="rulesets/java/codesize.xml"/>
+    <exclude name="NPathComplexity"/>
+    <exclude name="StdCyclomaticComplexity"/>
+    <exclude name="ModifiedCyclomaticComplexity"/>
+    <exclude name="ExcessivePublicCount"/>
+    <exclude name="TooManyFields"/>
+    <exclude name="NcssMethodCount"/>
+    <exclude name="NcssTypeCount"/>
+    <exclude name="NcssConstructorCount"/>
+    <exclude name="TooManyMethods"/>
+  </rule>
+
+  <rule ref="rulesets/java/imports.xml"/>
+  
 </ruleset>
