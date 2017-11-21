@@ -1,17 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE module PUBLIC          "-//Puppy Crawl//DTD Check Configuration 1.3//EN"          "http://checkstyle.sourceforge.net/dtds/configuration_1_3.dtd">
-
 <module name="Checker">
-    <module name="CyclomaticComplexity"/>
-    
+
+    <module name="CyclomaticComplexity">
+        <property name="max" value="15"/>
+    </module>
+
     <module name="LineLength"/>
-    
     <module name="MethodLength"/>
-    
     <module name="PackageDeclaration"/>
-    
     <module name="UnusedImports"/>
-    
     <module name="TreeWalker">
         <!-- Verifica os blocos vazios, mas não valida blocos sequenciais. -->
         <module name="EmptyBlock"/>
