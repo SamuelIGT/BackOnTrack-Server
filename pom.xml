@@ -113,36 +113,46 @@
 						<ruleset>http://localhost/design.xml</ruleset></rulesets></configuration> -->
 			</plugin>
 			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.9</version>
+				<executions>
+                    <execution>
+                        <id>default-prepare-agent</id>
+                        <goals>
+							<goal>prepare-agent</goal>
+						</goals>
+                    </execution>
+                    <execution>
+                        <id>default-report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+							<goal>report</goal>
+						</goals>
+                    </execution>
+                </executions>
+			</plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>${findbugs.version}</version>
 				<configuration>
-				<includeFilterFile>config/findbugs-include.xml</includeFilterFile>
-                    <effort>Max</effort>
-                    <failOnError>true</failOnError>
+					<includeFilterFile>config/findbugs-include.xml</includeFilterFile>
+					<effort>Max</effort>
+					<failOnError>true</failOnError>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 	<reporting>
 		<plugins>
-			<!--<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-pmd-plugin</artifactId>
-				<version>4.2.4</version>
-				<configuration>
-					<rulesets>
-						<ruleset>config/pmd-rules.xml</ruleset>
-					</rulesets>
-				</configuration>
-				<configuration>
+			<!--<plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-pmd-plugin</artifactId><version>4.2.4</version><configuration><rulesets><ruleset>config/pmd-rules.xml</ruleset></rulesets></configuration><configuration>
 						Two rule sets that come bundled with PMD
 					<rulesets><ruleset>/rulesets/java/braces.xml</ruleset><ruleset>/rulesets/java/naming.xml</ruleset>
 						 Custom local file system rule set
 						<ruleset>${project.basedir}/src/main/resources/pmd-rules.xml</ruleset>
 						 Custom remote rule set accessed via a URL
-						<ruleset>http://localhost/design.xml</ruleset></rulesets></configuration>
-			</plugin> -->
+						<ruleset>http://localhost/design.xml</ruleset></rulesets></configuration></plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
@@ -156,10 +166,10 @@
 				</reportSets>
 			</plugin>
 			<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jxr-plugin</artifactId>
-            <version>2.3</version>
-        </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
 		</plugins>
 	</reporting>
 </project>

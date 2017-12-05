@@ -23,6 +23,15 @@ public class Exercise {
 	public Exercise(){
 
 	}
+	
+	public Exercise(String title, String description, Midia midia, List<Object> objects) {
+		super();
+		this.title = title;
+		this.description = description;
+		this.midia = midia;
+		this.objects = objects;
+	}
+
 	public Exercise(String title){
 		this.title = title;
 	}
