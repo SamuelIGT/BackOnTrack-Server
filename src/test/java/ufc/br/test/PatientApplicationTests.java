@@ -22,7 +22,7 @@ import ufc.br.service.PatientService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PatientApplicationTest {
+public class PatientApplicationTests {
 	Patient patient;
 	Patient savedPatient;
 

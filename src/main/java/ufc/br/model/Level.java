@@ -14,8 +14,14 @@ public class Level {
     public Level(int level){
         this.level = level;
     }
+    
 
-    public int getId() {
+    public Level() {
+		super();
+	}
+
+
+	public int getId() {
         return id;
     }
 

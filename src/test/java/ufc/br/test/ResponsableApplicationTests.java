@@ -22,7 +22,7 @@ import ufc.br.service.ResponsibleService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ResponsableApplicationTest {
+public class ResponsableApplicationTests {
 	Responsible responsable;
 	Responsible savedResponsable;
 	
