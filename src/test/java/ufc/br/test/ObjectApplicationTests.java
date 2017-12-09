@@ -1,9 +1,5 @@
 package ufc.br.test;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.ArrayList;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,10 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.client.RestTemplate;
 
-import antlr.collections.List;
-import ufc.br.model.Exercise;
 import ufc.br.model.Object;
 import ufc.br.service.ObjectService;
 
@@ -31,7 +24,7 @@ public class ObjectApplicationTests {
 	ObjectService service;
 	
 	@Before
-	public void setup() {
+	public void setUp() throws Exception {
 		for(Object object: service.get().getBody()) {
 			service.delete(object.getId());
 		}

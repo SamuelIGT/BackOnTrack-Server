@@ -1,5 +1,6 @@
 package ufc.br.service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -8,9 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-
 import ufc.br.model.Patient;
-import ufc.br.model.Responsible;
 import ufc.br.repository.PatientRepository;
 import ufc.br.repository.ResponsibleRepository;
 
@@ -67,6 +66,13 @@ public class PatientService {
 	}
 
 	public ResponseEntity<List<Patient>> get(){
-		return new ResponseEntity<List<Patient>>(this.repository.findAll(), HttpStatus.OK);
+		if(this.repository == null) {
+			System.out.println("Why is null?");
+		}
+		ResponseEntity<List<Patient>> list = new ResponseEntity<List<Patient>>(this.repository.findAll(), HttpStatus.OK);
+		if(list == null) {
+			return new ResponseEntity<List<Patient>>(new ArrayList<Patient>(), HttpStatus.OK);
+		}
+		return list;
 	}
 }

@@ -20,7 +20,7 @@ import ufc.br.service.ExerciseService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ExerciseApplicationTests {
+public class LevelApplicationTest {
 	Exercise exercise;
 	Exercise savedExercise;
 	

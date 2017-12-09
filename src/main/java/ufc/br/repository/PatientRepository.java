@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import ufc.br.model.Patient;
 
 import java.util.List;
+
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, Integer>{
 	

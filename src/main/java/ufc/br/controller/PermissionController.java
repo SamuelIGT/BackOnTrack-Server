@@ -9,7 +9,7 @@ import ufc.br.service.PermitionService;
 @RestController
 @RequestMapping("/permitions")
 @CrossOrigin(origins = "*")
-public class PermitionController {
+public class PermissionController {
 
     @Autowired
     private PermitionService service;
