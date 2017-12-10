@@ -1,15 +1,15 @@
 language: java
 jdk:
- - oraclejdk8
- sudo: enabled
+- oraclejdk8
+sudo: enabled
  
 services:
 - postgresql
 
 script:
-    - mvn install
+- mvn install
 before_install:
-  - chmod +x mvnw
+- chmod +x mvnw
 
 services:
 - postgresql
