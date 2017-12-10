@@ -15,7 +15,7 @@ services:
     - postgresql
 
 script:
-    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar-scanner
 
     
 before_install:
