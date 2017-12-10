@@ -2,29 +2,21 @@ language: java
 sudo: enabled
 jdk:
 - oraclejdk8
+
+addons:
+  sonarcloud:
+    organization: "samueligt-github"
  
 services:
     - postgresql
 
 script:
     - mvn install
+    - sonar-scanner
+
     
 before_install:
     - chmod +x mvnw
 
-
-#postgres:
- # adapter: postgresql
- # database: patientTest
- # username: root
- # password: root
-
 before_script:
   - psql -c 'create database patient;' -U postgres
- # - psql -c 'create database patient;' -U postgres
-    #- "psql -c 'create database patientTest;' -U postgres"
-#    - cp config/database.travis.yml config/database.yml
-#    - psql -c "CREATE USER root WITH PASSWORD 'root';" -U postgres
-    
-
-    
