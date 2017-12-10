@@ -1,6 +1,9 @@
+postgresql: &postgresql
+adapter: postgresql
+username: root
+password: root
+database: patientTest
+
 test:
-  postgresql: &postgresql
   adapter: postgresql
-  username: root
-  password: root
   database: patientTest
