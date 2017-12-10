@@ -1,6 +1,3 @@
 test:
   adapter: postgresql
   database: patientTest
-  username: root
-  password: root
-  encoding: utf8
