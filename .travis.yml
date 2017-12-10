@@ -22,6 +22,7 @@ services:
  # password: root
 
 before_script:
+  - cp config/database.yml.travis config/database.yml
   - psql -c 'create database patientTest;' -U postgres
   - psql -c 'create database patient;' -U postgres
     #- "psql -c 'create database patientTest;' -U postgres"
