@@ -7,7 +7,8 @@ services:
     - postgresql
 
 script:
-    - psql -c 'create database patientTest;' -U root
+    - psql -c 'create database patientTest;' -U patientTest
+    - psql -c 'create database patientTest;' -U postgres
     - mvn install
     
 before_install:
