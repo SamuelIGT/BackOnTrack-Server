@@ -1,7 +1,17 @@
 language: java
 jdk:
  - oraclejdk8
+ 
+services:
+- postgresql
+
 script:
     - mvn install
 before_install:
   - chmod +x mvnw
+
+services:
+- postgresql
+
+before_script:
+- psql -c 'create database pacientTest;' -U postgres
