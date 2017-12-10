@@ -16,6 +16,7 @@ services:
 - postgresql
 
 before_script:
-    - psql -c 'create database patientTest;' -U postgres
-    - cp config/database.yml.travis config/database.yml
     - psql -c "CREATE USER root WITH PASSWORD 'root';" -U postgres
+    - psql -c 'create database patientTest;' -U root
+    - cp config/database.yml.travis config/database.yml
+    
