@@ -1,9 +1,0 @@
-postgresql: &postgresql
-adapter: postgresql
-username: postgres
-password: postgres
-database: patientTest
-
-test:
-  adapter: postgresql
-  database: patientTest
