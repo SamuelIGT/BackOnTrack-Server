@@ -16,5 +16,5 @@ services:
 - postgresql
 
 before_script:
-    - psql -c 'CREATE DATABASE pacientTest;' -U postgres
-    - psql -c 'CREATE USER root WITH PASSWORD 'root';' -U postgres
+    - psql -c "CREATE DATABASE pacientTest;" -U postgres
+    - psql -c "CREATE USER root WITH PASSWORD 'root';" -U postgres
