@@ -1,5 +1,5 @@
 test:
   adapter: postgresql
   username: postgres
-  password: postgres
+  password:
   database: patientTest
