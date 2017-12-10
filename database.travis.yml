@@ -1,5 +1,0 @@
-postgresql: &postgresql
-adapter: postgresql
-username: root
-password: root
-database: patientTest
