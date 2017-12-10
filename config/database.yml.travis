@@ -1,7 +1,7 @@
 postgresql: &postgresql
 adapter: postgresql
-username: root
-password: root
+username: postgres
+password: postgres
 database: patientTest
 
 test:
