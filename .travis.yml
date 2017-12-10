@@ -15,9 +15,15 @@ before_install:
 services:
 - postgresql
 
+postgres:
+  adapter: postgresql
+  database: patientTest
+  username: root
+  password: root
+
 before_script:
     - psql -c 'create database patientTest;' -U postgres
-    - cp config/database.travis.yml config/database.yml
+#    - cp config/database.travis.yml config/database.yml
 #    - psql -c "CREATE USER root WITH PASSWORD 'root';" -U postgres
     
 
