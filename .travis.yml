@@ -7,8 +7,7 @@ services:
     - postgresql
 
 script:
-
-    #- psql -c 'create database patientTest;' -U root
+    - psql -c 'create database patientTest;' -U root
     - mvn install
     
 before_install:
@@ -24,9 +23,8 @@ postgres:
   password: root
 
 before_script:
-   # - psql -c 'create database patientTest;' -U postgres
-    - "psql -c 'create database patientTest;' -U postgres"
-    - "rake db:migrate"
+   - psql -c 'create database patientTest;' -U postgres
+    #- "psql -c 'create database patientTest;' -U postgres"
 #    - cp config/database.travis.yml config/database.yml
 #    - psql -c "CREATE USER root WITH PASSWORD 'root';" -U postgres
     
