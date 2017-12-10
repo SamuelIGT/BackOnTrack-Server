@@ -6,8 +6,8 @@ jdk:
 addons:
   sonarcloud:
     organization: "samueligt-github"
-     token:
-      secure: $SONAR_TOKEN
+    token:
+    secure: $SONAR_TOKEN
  
 services:
     - postgresql
