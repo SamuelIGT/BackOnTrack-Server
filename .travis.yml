@@ -1,20 +1,20 @@
 language: java
+sudo: enabled
 jdk:
 - oraclejdk8
-sudo: enabled
  
 services:
-- postgresql
+    - postgresql
 
 script:
-- mvn install
+    - mvn install
+    
 before_install:
-- chmod +x mvnw
+    - chmod +x mvnw
 
 services:
 - postgresql
 
 before_script:
-- psql -c 'CREATE USER root WITH PASSWORD 'root';' -U postgres
-- psql -c 'CREATE DATABASE pacientTest;' -U postgres
-
+    - psql -c 'CREATE DATABASE pacientTest;' -U postgres
+    - psql -c 'CREATE USER root WITH PASSWORD 'root';' -U postgres
