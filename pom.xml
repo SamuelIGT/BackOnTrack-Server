@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>Pacientes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Pacientes</name>
+	<name>Back On Track Server</name>
 	<description>Projeto acompanhamento de pacientes</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,6 +21,13 @@
 		<java.version>1.8</java.version>
 		<checkstyle.config.location>config/checkstyle.xml</checkstyle.config.location>
 		<findbugs.version>3.0.5</findbugs.version>
+		<!-- sonar configuration -->
+		<sonar.projectKey>backontrack:server</sonar.projectKey>
+		<sonar.projectName>Back On Track Server</sonar.projectName>
+		<sonar.sources>src/main/java</sonar.sources>
+		<sonar.tests>src/test/java</sonar.tests>
+		<sonar.java.binaries>target/classes</sonar.java.binaries>
+		
 	</properties>
 	<dependencies>
 		<dependency>
